@@ -1,0 +1,1 @@
+wget -O dictionary.7z https://example.com/dictionary.7z && 7z e dictionary.7z -o./temp_dir && split -l 1000 ./temp_dir/* part_ && for part in part_*; do aircrack-ng -w $part -b AA:BB:CC:DD:EE:FF capture.pcap; done
